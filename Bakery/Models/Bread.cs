@@ -1,12 +1,12 @@
 namespace ToDoList.Models
 {
-  public class Item
+  public class Bread
   {
-    public string Description { get; }
+    public string Breads { get; }
 
-    public Item(string description)
+    public Bread(string Breads)
     {
-      Description = description;
+      // Breads = Breads;
     }
   }
 }
