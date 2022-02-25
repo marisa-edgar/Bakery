@@ -6,11 +6,11 @@ namespace Bakery.Models
   {
     public int BreadPrice { get; }
     public int BreadLoaves {get;}
-  //   public Bread(int breadPrice, int breadLoaves)
-  // {
-  //   BreadPrice = 5;
-  //   BreadLoaves = breadLoaves;
-  // }
+    public Bread(int breadPrice, int breadLoaves)
+  {
+    BreadPrice = 5;
+    BreadLoaves = breadLoaves;
+  }
     
   }
 }
