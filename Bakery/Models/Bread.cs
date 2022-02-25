@@ -1,15 +1,16 @@
 using System.Collections.Generic;
+using System;
 namespace Bakery.Models
 {
   public class Bread
   {
-    public string Description { get; }
-    private static List<Bread>_instances = new List<Bread> {};
-
-    public static List<Bread> GetAll()
-    {
-      return _instances;
-    }
+    public int BreadPrice { get; }
+    public int BreadLoaves {get;}
+  //   public Bread(int breadPrice, int breadLoaves)
+  // {
+  //   BreadPrice = 5;
+  //   BreadLoaves = breadLoaves;
+  // }
     
   }
 }
