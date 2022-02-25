@@ -18,11 +18,22 @@ namespace Bakery.Tests
     [TestMethod]
     public void GetBread_BreadPrice_Int()
     {
-      Bread newBread = new Bread(breadPrice, breadLoaves);
       int breadPrice = 5;
       int breadLoaves = 1;
+      Bread newBread = new Bread(breadPrice, breadLoaves);
       int inputBread = newBread.BreadPrice;
       Assert.AreEqual(inputBread, breadPrice);
+    }
+
+    [TestMethod]
+    public void GetBread_BreadPriceForTwoLoaves_Int()
+    {
+      int breadPrice = 5;
+      int breadLoaves = 2;
+      Bread newBread = new Bread(breadPrice, breadLoaves);
+      int price = newBread.BreadPrice;
+      int expectedPrice = 10;
+      Assert.AreEqual(expectedPrice, price);
     }
   }
 }

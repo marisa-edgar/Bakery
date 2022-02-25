@@ -12,11 +12,18 @@ namespace Bakery.Models
     BreadLoaves = breadLoaves;
   }
 
-  public int GetBreadPrice()
-  {
-    int breadPrice = 5;
-  }
-
-    
+    public int GetBreadPrice()
+    {
+      int BreadPrice = 5;
+      
+      if (BreadLoaves == 1)
+      {
+        return BreadPrice = 5;
+      }
+      else
+      {
+        return BreadLoaves = 0;
+      }
+    }
   }
 }
