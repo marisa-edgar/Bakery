@@ -20,13 +20,17 @@ namespace Bakery.Models
       {
         return BreadPrice = 5;
       }
-      if (BreadLoaves == 2)
+      else if (BreadLoaves == 2)
+      {
+        return BreadPrice = 10;
+      }
+      else if (BreadLoaves == 3)
       {
         return BreadPrice = 10;
       }
       else
       {
-        return BreadLoaves = 0;
+        return BreadLoaves * 5;
       }
     }
   }
