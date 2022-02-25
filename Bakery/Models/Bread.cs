@@ -1,12 +1,15 @@
-namespace ToDoList.Models
+using System.Collections.Generic;
+namespace Bakery.Models
 {
   public class Bread
   {
-    public string Breads { get; }
+    public string Description { get; }
+    private static List<Bread>_instances = new List<Bread> {};
 
-    public Bread(string Breads)
+    public static List<Bread> GetAll()
     {
-      // Breads = Breads;
+      return _instances;
     }
+    
   }
 }

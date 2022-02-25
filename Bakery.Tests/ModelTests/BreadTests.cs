@@ -6,14 +6,23 @@ using Bakery.Models;
 namespace Bakery.Tests
 {
   [TestClass]
-  public class BreadTests
+  public class BreadTests : IDisposable
   {
-    [TestMethod]
-    public void BreadConstructor_CreatesInstanceOfBread_Bread()
+
+    public void Dispose()
     {
-      string Breads = "1";
-      Assert.AreEqual(typeof(Breads), newBread.GetType());
+      Bread.ClearAll();
     }
+
+//   [TestClass]
+//   public class BreadTests
+//   {
+//     [TestMethod]
+//     public void BreadConstructor_CreatesInstanceOfBread_Bread()
+//     {
+//       string newBread = new Bread("1");
+//       Assert.AreEqual(typeof(Bread), newBread.GetType());
+//     }
 
   }
 }
