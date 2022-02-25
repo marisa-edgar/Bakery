@@ -11,6 +11,12 @@ namespace Bakery.Models
     BreadPrice = 5;
     BreadLoaves = breadLoaves;
   }
+
+  public int GetBreadPrice()
+  {
+    int breadPrice = 5;
+  }
+
     
   }
 }
