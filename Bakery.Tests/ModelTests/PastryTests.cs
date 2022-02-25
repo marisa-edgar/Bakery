@@ -24,5 +24,16 @@ namespace Bakery.Tests
       int inputPastry = newPastry.GetPastryPrice();
       Assert.AreEqual(inputPastry, pastryPrice);
     }
+
+    [TestMethod]
+    public void GetPastry_PastryPriceForThreeItems_Int()
+    {
+      int pastryPrice = 5;
+      int pastryItem = 3;
+      Pastry newPastry = new Pastry(pastryPrice, pastryItem);
+      int inputPastry = newPastry.GetPastryPrice();
+      int expectedPrice = 5;
+      Assert.AreEqual(inputPastry, pastryPrice);
+    }
   }
 }
