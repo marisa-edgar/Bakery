@@ -4,8 +4,8 @@ namespace Bakery.Models
 {
   public class Bread
   {
-    public int BreadPrice { get; }
-    public int BreadLoaves {get;}
+    public int BreadPrice { get; set;}
+    public int BreadLoaves {get; set; }
     public Bread(int breadPrice, int breadLoaves)
   {
     BreadPrice = 5;
