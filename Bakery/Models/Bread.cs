@@ -32,6 +32,7 @@ namespace Bakery.Models
       {
         return BreadLoaves * 5;
       }
+      return BreadPrice;
     }
   }
 }

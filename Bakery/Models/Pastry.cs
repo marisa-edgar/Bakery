@@ -35,6 +35,7 @@ namespace Bakery.Models
       {
         return PastryPrice * 2;
       }
+      return PastryPrice;
     }
   }
 }
