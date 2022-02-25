@@ -23,6 +23,10 @@ namespace Bakery.Models
       {
         return PastryPrice = 5;
       }
+      else if (PastryItem == 5)
+      {
+        return PastryPrice = 7;
+      }
       else
       {
         return PastryPrice * 2;
