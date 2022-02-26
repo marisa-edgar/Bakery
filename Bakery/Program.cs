@@ -13,9 +13,9 @@ namespace Bakery.Models
       static void Start()
       {
         Console.WriteLine("########################");
-        Console.WriteLine("Would you like randomly selected Bread(Y/N)");
-        string bread = Console.ReadLine().ToUpper();
-        if (bread == "Y")
+        Console.WriteLine("Would you like place an order(Y/N)");
+        string order = Console.ReadLine().ToUpper();
+        if (order == "Y")
         {
           Console.WriteLine("########################");
           Console.WriteLine("How many Breads loaves would you like?");
@@ -28,22 +28,23 @@ namespace Bakery.Models
           int PastryAmount = int.Parse(PastryPurchase);
           Console.WriteLine("Your Pastries has been added to your cart");
           Console.WriteLine("###########################");
-          Bread newBread = new Bread(5, BreadLoaves);
-          Pastry newPastry = new Pastry(2, PastryItems);
+          Bread newBread = new Bread(5, BreadAmount);
+          Pastry newPastry = new Pastry(2, PastryAmount);
           Console.WriteLine("###########################");
-          Console.WriteLine($"Here is your total: ${newBread.GetBreadPrice() + newPastry.GetPastryPrice()} +.00");
+          Console.WriteLine($"Here is your total: ${newBread.GetBreadPrice() + newPastry.GetPastryPrice()}.00");
           End();
         }
-        else if (check == "N")
+        else if (order == "N")
         {
           Console.WriteLine("#############################");
           Console.WriteLine("Get out of here and stop wasting my time");
         }
         else
-      {
-        Console.WriteLine("####################################################");
-        Console.WriteLine("Okay mumbles speak up. Please type Y or N.");
-        Start();
+        {
+          Console.WriteLine("####################################################");
+          Console.WriteLine("Okay mumbles speak up. Please type Y or N.");
+          Start();
+        }
       }
       static void End()
       {
@@ -64,8 +65,8 @@ namespace Bakery.Models
         {
           Console.WriteLine("##############################################");
           Console.WriteLine("Okay mumbles speak up. Please type Y or N.");
+          Console.WriteLine("##############################################");
           End();
-        }
         }
       }
     }
