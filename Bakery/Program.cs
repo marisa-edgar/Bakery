@@ -28,8 +28,8 @@ namespace Bakery.Models
           int PastryAmount = int.Parse(PastryPurchase);
           Console.WriteLine("Your Pastries has been added to your cart");
           Console.WriteLine("###########################");
-          Bread newBread = new Bread(5, BreadAmount);
-          Pastry newPastry = new Pastry(2, PastryAmount);
+          Bread newBread = new Bread(BreadAmount);
+          Pastry newPastry = new Pastry(PastryAmount);
           Console.WriteLine("###########################");
           Console.WriteLine($"Here is your total: ${newBread.GetBreadPrice() + newPastry.GetPastryPrice()}.00");
           End();
