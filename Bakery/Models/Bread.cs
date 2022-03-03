@@ -16,23 +16,22 @@ namespace Bakery.Models
     {
       int BreadPrice = 5;
       
-      if (BreadLoaves == 1)
+      if (BreadLoaves <= 2)
       {
-        return BreadPrice = 5;
+        return BreadPrice * 5;
       }
-      else if (BreadLoaves == 2)
+      else if (BreadLoaves % 3 == 0)
       {
-        return BreadPrice = 10;
+        return BreadPrice / 3 * 10;
       }
-      else if (BreadLoaves == 3)
+      else if (BreadLoaves % 3 == 2)
       {
-        return BreadPrice = 10;
+        return (BreadPrice - 2) / 3 * 10 + 10;
       }
       else
       {
-        return BreadLoaves * 5;
+        return (BreadLoaves - 1)/ 3 * 10 + 5;
       }
-      return BreadPrice;
     }
   }
 }

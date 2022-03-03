@@ -15,27 +15,22 @@ namespace Bakery.Models
     {
       int PastryPrice = 5;
     
-      if (PastryItem == 1)
-      {
-        return PastryPrice = 2;
-      }
-      else if (PastryItem == 3)
-      {
-        return PastryPrice = 5;
-      }
-      else if (PastryItem == 4)
-      {
-        return PastryPrice = 7;
-      }
-      else if (PastryItem == 5)
-      {
-        return PastryPrice = 9;
-      }
-      else
+      if (PastryItem <= 2)
       {
         return PastryPrice * 2;
       }
-      return PastryPrice;
+      else if (PastryItem % 3 == 0)
+      {
+        return PastryPrice / 3 * 5;
+      }
+      else if (PastryItem % 3 == 2)
+      {
+        return (PastryPrice - 2) / 3 * 5 + 4;
+      }
+      else
+      {
+        return (PastryPrice - 1) / 3 * 5 + 2;
+      }
     }
   }
 }
